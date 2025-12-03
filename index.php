@@ -18,7 +18,7 @@ $server = "localhost";
 $server = "localhost";
 $user = "root";
 $password = "";
-$database = "tmahasiswa";
+$database = "dbkampus";
 
 $koneksi = mysqli_connect($server, $user, $password, $database) or die(mysqli_error($koneksi));
 
