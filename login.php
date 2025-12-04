@@ -73,7 +73,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Akun - Futuristik</title>
+    <title>Daftar Akun</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -99,7 +99,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <button type="submit" class="btn-login">Masuk</button>
             <div class="extra-links">
                 <p>Tidak punya akun? <a href="register.php">Daftar</a></p>
-                <p> <a href="reset_password.php">Lupa Password?</a></p>
             </div>
         </form>
     </div>

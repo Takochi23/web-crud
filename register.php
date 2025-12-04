@@ -7,7 +7,6 @@ $username = $password = $confirm_password = "";
 $username_err = $password_err = $confirm_password_err = "";
 $register_success = "";
 
-// Proses form saat dikirim
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validasi username
@@ -77,19 +76,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Akun - Futuristik</title>
+    <title>Daftar Akun</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="particle-container"></div>
 
     <div class="login-card" id="loginCard">
-        <h2>Daftar Akun Baru</h2>
+        <h2>Daftar Akun</h2>
         
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            
             <div class="input-box">
                 <input type="text" name="username" placeholder="Username" value="<?= htmlspecialchars($username); ?>" required>
+                <?php if(!empty($email_err)) echo '<div class="error-message">'.$email_err.'</div>'; ?>
+            
+            <div class="input-box">
+                <br>
+                <br>
+                <input type="email" name="email" placeholder="Email" value="<?= htmlspecialchars($username); ?>" required>
                 <?php if(!empty($username_err)) echo '<div class="error-message">'.$username_err.'</div>'; ?>
             </div>    
             <div class="input-box">
